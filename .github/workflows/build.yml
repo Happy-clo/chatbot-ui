@@ -28,7 +28,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: build-artifacts
-        path: build/* # 确保这里的路径与你的构建输出目录匹配
+        path: .next/* # 确保这里的路径与你的构建输出目录匹配
 
     - name: Create Release
       if: github.event_name == 'push'
@@ -48,6 +48,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./build
+        asset_path: ./.next
         asset_name: build.zip
         asset_content_type: application/zip
