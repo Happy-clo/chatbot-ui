@@ -7,9 +7,9 @@ const withPWA = require("next-pwa")({
 })
 
 // next.config.js
-module.exports = {
-  distDir: 'build', // 将默认的 '.next' 目录更改为 'build'
-}
+// module.exports = {
+//  distDir: 'build', // 将默认的 '.next' 目录更改为 'build'
+// }
 
 module.exports = withBundleAnalyzer(
   withPWA({
