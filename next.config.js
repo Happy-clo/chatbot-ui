@@ -6,6 +6,11 @@ const withPWA = require("next-pwa")({
   dest: "public"
 })
 
+// next.config.js
+module.exports = {
+  distDir: 'build', // 将默认的 '.next' 目录更改为 'build'
+}
+
 module.exports = withBundleAnalyzer(
   withPWA({
     reactStrictMode: true,
